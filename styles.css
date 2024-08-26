@@ -1,0 +1,43 @@
+body{
+    background-color: rgb(185, 189, 189);        
+    display: block;
+    margin-top: 10%;
+}
+.watch{
+    color: black;
+    font-size: 40px;
+    text-align: center;
+          
+}
+.conteiner{
+    font-size: 30px;
+    text-align: center;
+    padding: 5px;     
+ }
+ .bt_iniciar{
+    background-color:green;
+    text-align: center; 
+    color: yellow;
+    border: 2cap;
+    cursor: pointer;
+    font-size: 30px;
+    width: 130px;         
+}
+.bt_pausar{
+    background-color:rgb(9, 0, 128);
+    text-align: center; 
+    color: white;
+    border: 2cap;
+    cursor: pointer;
+    font-size: 30px;
+    width: 130px;     
+}
+.bt_sair{
+    background-color:red;
+    text-align: center; 
+    color: white;
+    border: 2cap;
+    cursor: pointer;
+    font-size: 30px;
+    width: 130px;     
+}
