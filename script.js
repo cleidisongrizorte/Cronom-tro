@@ -4,44 +4,38 @@ let minutos = 0;
 let horas = 0;
 let interval;
 
-function init(){
-    watch();
+function init() {
     interval = setInterval(watch, 1000);
 }
-const digtZero = (digit)=> {
-    if(digit<10){
-        return  0${digit};
-         }else {
-            return digit;
-         }
+
+const digitZero = (digit) => {
+    return digit < 10 ? '0' + digit : digit;
 }
-// funcão pause
+
+// Função pausar
 const pause = () => {
+    clearInterval(interval);
+}
+
+// Função zerar
+const clearAll = () => {
     clearInterval(interval);
     segundos = 0;
     minutos = 0;
+    horas = 0;
     watchDocument.innerHTML = "00:00:00";
 }
 
-//funcão zerar
-const clearAll = () =>{
-    clearInterval(interval);
-}
-
-function watch(){
-    segundos;
+function watch() {
+    segundos++;
     if (segundos === 60) {
-    minutos = minutos + 1;
-    segundos = 0;
+        minutos++;
+        segundos = 0;
     }
     if (minutos === 60) {
-    horas = horas + 1;
-    segundos = 0;
-    minutos = 0;
+        horas++;
+        minutos = 0;
     }
 
-watchDocument.innerHtml = horas + ":" + minutos +":" + segundos;
-
-watchDocument.innerHtml = digitZero(horas) + ":" + digitZero(minutos) +":" +
-digitZero(segundos);
+    watchDocument.innerHTML = digitZero(horas) + ":" + digitZero(minutos) + ":" + digitZero(segundos);
 }
