@@ -6,7 +6,7 @@ let interval;
 
 function init(){
     watch();
-    interval = setInterval(watch, 10000);
+    interval = setInterval(watch, 1000);
 }
 const digtZero = (digit)=> {
     if(digit<10){
